@@ -1,0 +1,34 @@
+.pagination {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+}
+
+.pagination button {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 10px 20px;
+    z-index: 100;
+    font-size: 12px;
+    outline: none;
+}
+
+.pagination button.active {
+    background-color: red;
+}
+
+@media only screen and (max-width: 600px){
+
+    .pagination button {
+        padding: 5px 10px;
+    }
+}

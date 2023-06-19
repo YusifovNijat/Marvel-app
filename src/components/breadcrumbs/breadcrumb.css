@@ -1,0 +1,10 @@
+.breadcrumb {
+    cursor: pointer;
+}
+
+.breadcrumb a {
+    color: #fff;
+}
+.breadcrumb p {
+    color: red;
+}
