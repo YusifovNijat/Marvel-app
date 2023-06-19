@@ -13,7 +13,7 @@ const TableDisplay = ({items, currentTable, setCurrentTable, info, description, 
         {currentTable && (location.pathname === `/${itemId}`) ? <> {info} </> 
         : (location.pathname === `/${itemId}/description`) ? <><Breadcrumb itemId={itemId}/>{description}</> 
         : (location.pathname === `/${itemId}/link`) ? <><Breadcrumb itemId={itemId}/> {link}</> 
-        : <Routes><Route path='/' element={<MainInfo items={items}/>}/></Routes>}
+        : <Routes><Route exact path='/' element={<MainInfo items={items}/>}/></Routes>}
     </div>
   )
 }
