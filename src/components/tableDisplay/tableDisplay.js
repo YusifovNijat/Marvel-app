@@ -9,11 +9,11 @@ const TableDisplay = ({items, currentTable, setCurrentTable, info, description, 
   const location = useLocation();
   return (
     <div className='table-display'>
-        <Link to='/marvel-app'><h1 onClick={()=>setCurrentTable(false)}>MARVEL</h1></Link>
+        <Link to='/'><h1 onClick={()=>setCurrentTable(false)}>MARVEL</h1></Link>
         {currentTable && (location.pathname === `/${itemId}`) ? <> {info} </> 
         : (location.pathname === `/${itemId}/description`) ? <><Breadcrumb itemId={itemId}/>{description}</> 
         : (location.pathname === `/${itemId}/link`) ? <><Breadcrumb itemId={itemId}/> {link}</> 
-        : <Routes><Route path='/marvel-app' element={<MainInfo items={items}/>}/></Routes>}
+        : <Routes><Route path='/' element={<MainInfo items={items}/>}/></Routes>}
     </div>
   )
 }
